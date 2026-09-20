@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    image: tx-driving-log:local
+    restart: unless-stopped
+    ports:
+      - "5656:8000"
+    env_file: .env
+    networks:
+      - database
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5)"]
+      interval: 30s
+      timeout: 6s
+      retries: 3
+      start_period: 20s
+networks:
+  database:
+    external: true
+    name: crochetkrush_default

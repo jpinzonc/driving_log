@@ -1,0 +1,6 @@
+.env
+*.pdf
+__pycache__
+.git
+*.sql
+ tests

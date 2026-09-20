@@ -1,0 +1,5 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Behind the Wheel · Driving Log</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><main><header><a class="brand" href="/">↗ BEHIND THE WHEEL</a><span>Texas · Practice log</span></header>
+{% for category, message in get_flashed_messages(with_categories=true) %}<div class="notice {{ category }}" role="alert">{{ message }}</div>{% endfor %}
+{% block content %}{% endblock %}<footer>Based on the Aceable Behind-the-wheel Practice Log. Topic hours are suggested targets. Log practice separately from in-car observation and instruction.</footer></main></body></html>
