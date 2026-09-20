@@ -1,6 +1,6 @@
 # Texas driving practice log
 
-Open http://pinzon-net:5656. This single-student Flask app follows the supplied Aceable PDF's ten topics and suggested hours. Enter session durations in whole minutes; the dashboard shows hours, the 30-hour goal, and the 10-hour nighttime goal. Sessions can be edited or deleted, and CSV export includes the student's details and all session fields.
+This single-student Flask app follows the supplied Aceable PDF's ten topics and suggested hours. Enter session durations in whole minutes; the dashboard shows hours, the 30-hour goal, and the 10-hour nighttime goal. Sessions can be edited or deleted, and CSV export includes the student's details and all session fields.
 
 The template's 120-minute daily cap is enforced across sessions, including concurrent writes. Topic targets are suggestions and do not block entry. Day/night classification is entered manually. This tracker does not generate a signed official PDF.
 
